@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "Tiza";
+    src: url('tiza.woff') format("woff");
+}
+
+html, body {
+    font-family: "Arial", "sans-serif";
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    text-align: center;
+    background: transparent url("../img/grill.jpg") 0 0 / cover no-repeat;
+}
+body::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .65);
+    position: absolute;
+    display: block;
+    top: 0;
+}
+
+.content {
+    margin: 0 auto;
+    z-index: 10;
+    position: relative;
+    overflow: hidden;
+}
+
+.desc {
+    font-size: 28px;
+    font-style: italic;
+    line-height: 1.5em;
+    white-space: pre-wrap;
+    /*text-align: left;
+    max-width: 450px;
+    margin: 0 auto;*/
+}
+
+.title { font-family: "Tiza", "Arial", "sans-serif"; }
+.title.t1 { font-size: 55px; }
+.title.t2 { font-size: 48px; }
+.title.t3 { font-size: 68px; }
+.title.t1[title] { cursor: help; }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+a.link {
+
+    border: 1px solid transparent;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 4px;
+    transition: border-color .3s ease;
+}
+a.link * {
+    vertical-align: middle;
+}
+a.link:hover {
+    border-color: #fff;
+    text-decoration: none;
+}
+a.link img { border-radius: 3px; }
+
+.copy {
+    font-size: 14px;
+    margin-top: 150px;
+    color: rgba(255, 255, 255, .5);
+    white-space: pre-wrap;
+}
+
+.nadtrzeni {
+    text-decoration: overline;
+}
