@@ -26,14 +26,15 @@ Zdroj obrázků je <a href="https://www.google.cz/imghp?tbm=isch">Google</a></p>
         <script>
             try {
                 let datum = document.querySelector(".title.t1");
-                datum.title = new Date(2017, 7, 23, 18).toLocaleString();
+                let d = new Date(2017, 7, 23, 18);
+                let localeStringOptions = { month: "long", day: "numeric", hour: "numeric", minute: "numeric" }
+                datum.title = d.toLocaleString();
                 switch (navigator.language) {
-                    case "sk": datum.innerHTML = "23. Augusta, 18:00";
-                        break;
-                    case "en-US": datum.innerHTML = "August 23th, 6:00 p.m.";
-                        break;
+                    case "sk":
                     case "en":
-                    case "en-GB": datum.innerHTML = "23th August, 6:00 p.m.";
+                    case "en-US":
+                    case "en-GB":
+                        datum.innerHTML = d.toLocaleString(navigator.language, localeStringOptions);
                         break;
                 }
             } catch (e) {
